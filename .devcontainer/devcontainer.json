@@ -1,0 +1,8 @@
+{
+  "name": "NexusAI SaaS (base)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm",
+  "hostRequirements": { "cpus": 4, "memory": "8gb" },
+  "postCreateCommand": "npm ci --no-audit --no-fund && npx playwright install --with-deps chromium",
+  "forwardPorts": [3000],
+  "portsAttributes": { "3000": { "label": "App", "onAutoForward": "openBrowser" } }
+}
